@@ -1,0 +1,14 @@
+{
+  "name": "trial.loc",
+  "authors": [
+    "AndreyGot <andreygot88@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "sonata-project-admin-bundle": "./vendor/sonata-project/admin-bundle/bower.json"
+  }
+}
