@@ -9,6 +9,7 @@
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "sonata-project-admin-bundle": "./vendor/sonata-project/admin-bundle/bower.json"
+    "sonata-project-admin-bundle": "./vendor/sonata-project/admin-bundle/bower.json",
+    "bootstrap": "^3.3.7"
   }
 }
