@@ -12,24 +12,27 @@ class UserAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('username')
+            // ->addIdentifier('username')
             ->add('email')
+            ->add('roles')
         ;
     }
 
-    // public function configureFormFields(FormMapper $formMapper)
-    // {
-    //     $formMapper
-    //         ->tab('General') // the tab call is optional
-    //             ->with('User name', array(
-    //                 'class'       => 'col-md-8',
-    //                 'box_class'   => 'box box-solid box-danger',
-    //                 'description' => 'Insert user name',
-    //                 // ...
-    //             ))
-    //                 ->add('username')
-    //                 ->add('email')
-    //             ->end()
-    //         ->end()
-    //     ;
-    // }
+    public function configureFormFields(FormMapper $formMapper)
+    {
+        $formMapper
+            ->tab('General') // the tab call is optional
+                ->with('User name', array(
+                    'class'       => 'col-md-8',
+                    'box_class'   => 'box box-solid box-danger',
+                    'description' => 'Insert user name',
+                    // ...
+                ))
+                    ->add('username')
+                    ->add('email')
+                    ->add('password')
+                ->end()
+            ->end()
+        ;
+    }
 }
