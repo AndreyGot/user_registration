@@ -1,15 +1,16 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}">
     </head>
     <body>
 			{% block title %}
 				<div id="div1" align="center">
 				    <a class="btn btn-default" href="http://trial.loc/app_dev.php" role="button">HOME</a>
 				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/register/" role="button">registration</a>
-				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/login" role="button">/login</a>
-				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/admin/dashboard" role="button">Link admin</a>
-				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/profile" role="button">profile</a>
+				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/login" role="button">login</a>
+                    <a class="btn btn-default" href="http://trial.loc/app_dev.php/profile" role="button">profile</a>
+				    <a class="btn btn-default" href="http://trial.loc/app_dev.php/admin/dashboard" role="button">Onli for admin</a>
 				</div>
 			{% endblock %}
 
