@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        facebookId: "%facebookId%"
 
 # Doctrine Configuration
 doctrine:
@@ -87,3 +89,15 @@ fos_user:
     from_email:
         address:        webmaster@example.com
         sender_name:    webmaster
+
+hwi_oauth:
+    firewall_names: [main]
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           "%facebookId%"
+            client_secret:       "%facebookSecret%"
+            scope: email
+            options:
+                display: popup #dialog is optimized for popup window
+                auth_type: rerequest # Re-asking for Declined Permissions

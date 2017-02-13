@@ -9,3 +9,8 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [AppBundle]]
+    
+    app_user_provider:
+        class: AppBundle\Provider\FacebookUserProvider
+        arguments:
+            - "@doctrine.orm.entity_manager"
