@@ -18,9 +18,15 @@ security:
                 csrf_token_generator: security.csrf.token_manager
                 # if you are using Symfony < 2.8, use the following config instead:
                 # csrf_provider: form.csrf_provider
+                require_previous_session: false
 
-            logout:       true
-            anonymous: ~
+            logout:         true
+            anonymous:      true
+            remember_me:
+                key:      "%secret%"
+                lifetime: 1220 # 15 week in seconds
+                path:     /
+
             oauth:
                 resource_owners:
                     facebook:           "/login/check-facebook"
