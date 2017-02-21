@@ -1,8 +1,10 @@
 {% extends "@FOSUser/layout.html.twig" %}
 
 {% block fos_user_content %}
+
     {{ include('@FOSUser/Security/login_content.html.twig') }}
-    <div id="fb-root"></div>
+{# здесь блок для входа через фейсбук #}
+{#     <div id="fb-root"></div>
     <script>
         window.fbAsyncInit = function() {
             // init the FB JS SDK
@@ -45,6 +47,6 @@
 
     <p>
         <a href="#" onclick="fb_login();">Facebook Connect Button (Dialog)</a>
-    </p>
+    </p> #}
 
 {% endblock fos_user_content %}

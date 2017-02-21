@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}">
+    </head>
+    <body>
+        <div id="content">
+
+            {% block header%}
+                {% include "AppBundle::header.html.twig" %}
+            {% endblock %}
+
+            {% block body %}
+                <div>
+{#                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") == false%}
+                        <div class="row">
+                            <div class="col-md-4">
+                                {% render url('fos_user_security_login') %}
+                                {{ render(controller("AppBundle:Security:login")) }}
+                            </div>
+                        </div>
+                    {% endif %} #}
+
+                    <div>
+                        <h1>home_page.html.tvig</h1>
+                        <h2>Турнир на деньги. Реальные выплаты. Быстрые столы. Стримы и другое</h2>
+                        <p>Главная + блок регистрации</p>
+                    </div>
+                    
+                </div>
+            {% endblock %}
+        </div>
+    </body>
+</html>
